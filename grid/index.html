@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flexbox Example</title>
+
+	<style>
+		/* Custom font */
+		@font-face {
+			font-family: 'Dancing Script';
+			src: url('DancingScript-VariableFont_wght.ttf');
+		}
+
+		/* Applies to everything */
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Dancing Script';
+		}
+
+		/* Basic styling */
+		body {
+			padding: 20px;
+			background-color: lightblue;
+		}
+		h1 {
+			text-align: center;
+			margin-bottom: 40px;
+		}
+
+		/* Grid parent */
+		.archive-container {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			gap: 20px;
+			justify-content: center;
+		}
+
+		/* Archive children */
+		/* (if use flex to center content) */
+		.archive-container div {
+			border: 1px solid black;
+			background-color: pink;
+			padding: 20px;
+			transition: transform 1s, border-radius .5s, color .5s, background-color .5s;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 20px;
+			cursor: crosshair;
+		}
+
+		/* Image sizing */
+		.archive-container img {
+			height: 100px;
+		}
+
+		/* Interactivity */
+		.archive-container div:hover {
+			transform: scale(2) rotate(5deg);
+			background-color: yellowgreen;
+			color: white;
+			border-radius: 50%;
+		}
+
+		/* Media queries for mobile */
+		@media only screen and (max-width: 1000px) {
+			.archive-container {
+				grid-template-columns: 1fr 1fr;
+			}
+		}
+		@media only screen and (max-width: 600px) {
+			.archive-container {
+				grid-template-columns: 1fr;
+			}
+		}
+	</style>
+</head>
+<body>
+	<h1>Beautiful photos of donkeys</h1>
+
+	<div class="archive-container">
+
+		<div>
+			<img src="assets/ashleigh.jpeg">
+			<h2>Ashleigh</h2>
+			<p>Likes: cheese</p>
+			<p>Hates: cold weather</p>
+		</div>
+
+		<div>
+			<img src="assets/ashley.jpeg">
+			<h2>Ashley</h2>
+			<p>Likes: cheese</p>
+			<p>Hates: cold weather</p>
+		</div>
+
+		<div>
+			<img src="assets/aurora.jpeg">
+			<h2>Aurora</h2>
+			<p>Likes: cheese</p>
+			<p>Hates: cold weather</p>
+		</div>
+
+		<div>
+			<img src="assets/bob.jpeg">
+			<h2>Bob</h2>
+			<p>Likes: cheese</p>
+			<p>Hates: cold weather</p>
+		</div>
+
+		<div>
+			<img src="assets/cassandra.jpeg">
+			<h2>Cassandra</h2>
+			<p>Likes: cheese</p>
+			<p>Hates: cold weather</p>
+		</div>
+
+		<div>
+			<img src="assets/gregory.webp">
+			<h2>Gregory</h2>
+			<p>Likes: cheese</p>
+			<p>Hates: cold weather</p>
+		</div>
+
+		<div>
+			<img src="assets/jennifer.jpeg">
+			<h2>Jennifer</h2>
+			<p>Likes: cheese</p>
+			<p>Hates: cold weather</p>
+		</div>
+
+		<div>
+			<img src="assets/jon.webp">
+			<h2>Jon</h2>
+			<p>Likes: cheese</p>
+			<p>Hates: cold weather</p>
+		</div>
+
+		<div>
+			<img src="assets/jordan.jpeg">
+			<h2>Jordan</h2>
+			<p>Likes: cheese</p>
+			<p>Hates: cold weather</p>
+		</div>
+
+		<div>
+			<img src="assets/joseph.jpeg">
+			<h2>Joseph</h2>
+			<p>Likes: cheese</p>
+			<p>Hates: cold weather</p>
+		</div>
+
+		<div>
+			<img src="assets/peter.jpeg">
+			<h2>Peter</h2>
+			<p>Likes: cheese</p>
+			<p>Hates: cold weather</p>
+		</div>
+
+		<div>
+			<img src="assets/stacey.jpeg">
+			<h2>Stacey</h2>
+			<p>Likes: cheese</p>
+			<p>Hates: cold weather</p>
+		</div>
+
+	</div>
+
+	<p style="text-align: center; margin-top: 40px;">(they all like cheese and hate cold weather)</p>
+</body>
+</html>

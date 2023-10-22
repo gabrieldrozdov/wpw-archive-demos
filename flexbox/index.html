@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flexbox Example</title>
+
+	<style>
+		/* Applies to everything */
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: sans-serif;
+		}
+
+		/* Basic styling */
+		body {
+			padding: 20px;
+			background-color: white;
+		}
+		h1 {
+			text-align: center;
+			margin-bottom: 40px;
+		}
+
+		/* Flex parent */
+		.archive-container {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			justify-content: center;
+		}
+
+		/* Flex children */
+		.archive-container a {
+			border: 5px solid black;
+			color: black;
+			padding: 20px;
+			background-color: white;
+			font-size: 50px;
+		}
+
+		/* Interactivity */
+		.archive-container a:hover {
+			background-color: black;
+			color: white;
+		}
+		.archive-container a:active {
+			transform: scale(.95);
+		}
+
+		/* Media queries for mobile */
+		@media only screen and (max-width: 1000px) {
+			.archive-container a {
+				font-size: 20px;
+				border: 3px solid black;
+			}
+		}
+		@media only screen and (max-width: 600px) {
+			.archive-container a {
+				font-size: 10px;
+				border: 1px solid black;
+			}
+		}
+	</style>
+</head>
+<body>
+	<h1>Wikipedia articles for people named Gabriel</h1>
+
+	<div class="archive-container">
+
+		<a href="https://en.wikipedia.org/wiki/Gabriel_(footballer,_born_1984)">João Gabriel da Silva</a>
+
+		<a href="https://en.wikipedia.org/wiki/Gabriel_Moura">Gabriel Rodrigues de Moura</a>
+		
+		<a href="https://en.wikipedia.org/wiki/Gabriel_(footballer,_born_July_1992)">Gabriel Girotto Franco</a>
+
+		<a href="https://en.wikipedia.org/wiki/Gabriel_(footballer,_born_September_1992)">Gabriel Vasconcelos Ferreira</a>
+
+		<a href="https://en.wikipedia.org/wiki/Gabriel_(footballer,_born_1995)">Gabriel Costa França</a>
+
+		<a href="https://en.wikipedia.org/wiki/Gabriel_Mesquita">Gabriel José Ferreira Mesquita</a>
+
+		<a href="https://en.wikipedia.org/wiki/Gabriel_Paulista">Gabriel Armando de Abreu</a>
+
+		<a href="https://en.wikipedia.org/wiki/Gabriel_Barbosa">Gabriel Barbosa Almeida</a>
+
+		<a href="https://en.wikipedia.org/wiki/Gabriel_Magalh%C3%A3es">Gabriel dos Santos Magalhães</a>
+
+		<a href="https://en.wikipedia.org/wiki/Gabriel_Souza">Gabriel Eugénio Souza</a>
+
+		<a href="https://en.wikipedia.org/wiki/Gabriel_Jesus">Gabriel Fernando de Jesus</a>
+
+		<a href="https://en.wikipedia.org/wiki/Gabriel_Martinelli">Gabriel Teodoro Martinelli Silva</a>
+
+	</div>
+
+	<p style="text-align: center; margin-top: 40px;">(they're all footballers?)</p>
+</body>
+</html>
